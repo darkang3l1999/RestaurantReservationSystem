@@ -91,5 +91,39 @@ namespace RestaurantReservationSystem
         {
             IncarcaRezervari();
         }
+
+        private void btnValidare_Click(object sender, EventArgs e)
+        {
+            if (lstRezervari.SelectedIndex >= 0)
+            {
+                rezervari.RemoveAt(lstRezervari.SelectedIndex);
+                ActualizeazaLista();
+                SalveazaRezervari();
+                MessageBox.Show("Rezervarea a fost onorata");
+            }
+            else
+            {
+                MessageBox.Show("Selectati o rezervare");
+            }
+        }
+
+        private void btnCauta_Click(object sender, EventArgs e)
+        {
+            string cautaText = txtSearch.Text.ToLower();
+
+            for (int i = 0; i < lstRezervari.Items.Count; i++)
+            {
+                string item = lstRezervari.Items[i].ToString().ToLower();
+
+                // Selectăm prima potrivire
+                if (item.Contains(cautaText))
+                {
+                    lstRezervari.SetSelected(i, true);
+                    return;
+                }
+            }
+
+            MessageBox.Show("Nicio rezervare găsita!", "Căutare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

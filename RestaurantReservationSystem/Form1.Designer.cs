@@ -37,6 +37,10 @@
             this.btnAdaugaRezervare = new System.Windows.Forms.Button();
             this.lstRezervari = new System.Windows.Forms.ListBox();
             this.btnStergeRezervare = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnValidare = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnCauta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudNrPersoane)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,6 +124,7 @@
             this.lstRezervari.ItemHeight = 15;
             this.lstRezervari.Location = new System.Drawing.Point(30, 204);
             this.lstRezervari.Name = "lstRezervari";
+            this.lstRezervari.ScrollAlwaysVisible = true;
             this.lstRezervari.Size = new System.Drawing.Size(450, 109);
             this.lstRezervari.TabIndex = 7;
             // 
@@ -127,17 +132,57 @@
             // 
             this.btnStergeRezervare.Location = new System.Drawing.Point(30, 320);
             this.btnStergeRezervare.Name = "btnStergeRezervare";
-            this.btnStergeRezervare.Size = new System.Drawing.Size(450, 23);
+            this.btnStergeRezervare.Size = new System.Drawing.Size(191, 23);
             this.btnStergeRezervare.TabIndex = 8;
             this.btnStergeRezervare.Text = "Sterge rezervare";
             this.btnStergeRezervare.UseVisualStyleBackColor = true;
             this.btnStergeRezervare.Click += new System.EventHandler(this.btnStergeRezervare_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(477, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnValidare
+            // 
+            this.btnValidare.Location = new System.Drawing.Point(263, 319);
+            this.btnValidare.Name = "btnValidare";
+            this.btnValidare.Size = new System.Drawing.Size(183, 23);
+            this.btnValidare.TabIndex = 10;
+            this.btnValidare.Text = "Validare";
+            this.btnValidare.UseVisualStyleBackColor = true;
+            this.btnValidare.Click += new System.EventHandler(this.btnValidare_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(124, 178);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 11;
+            // 
+            // btnCauta
+            // 
+            this.btnCauta.Location = new System.Drawing.Point(30, 178);
+            this.btnCauta.Name = "btnCauta";
+            this.btnCauta.Size = new System.Drawing.Size(75, 23);
+            this.btnCauta.TabIndex = 12;
+            this.btnCauta.Text = "Cauta";
+            this.btnCauta.UseVisualStyleBackColor = true;
+            this.btnCauta.Click += new System.EventHandler(this.btnCauta_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.btnCauta);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnValidare);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStergeRezervare);
             this.Controls.Add(this.lstRezervari);
             this.Controls.Add(this.btnAdaugaRezervare);
@@ -168,6 +213,10 @@
         private System.Windows.Forms.Button btnAdaugaRezervare;
         private System.Windows.Forms.ListBox lstRezervari;
         private System.Windows.Forms.Button btnStergeRezervare;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnValidare;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnCauta;
     }
 }
 
